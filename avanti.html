@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700&display=swap" rel="stylesheet">
+
+    <!---Swiper css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header sticky-top">
+        <aside class="promo-bar text-center text-white">
+            <p>
+                Ganhe <span class="purple-light">R$10,00</span> de desconto no seu primeiro pedido. <wbr> Utilize o cupom <span class="lighter">DESCONTO10</span>
+            </p>
+        </aside>
+        <div class="container">
+            <div class="row-header row align-items-center">
+                <button class="menu-toggle col-lg-1 col-md-1  d-xl-none " onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="col-logo-avanti col-lg-auto col-md-8 me-5 ">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/avanti.png" alt="Logo Avanti">
+                    </a>
+                </div>
+
+                <div class="col-search col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="position-relative ">
+                        <form class="input-group">
+                            <input type="text" class="form-control" placeholder="Digite aqui o que você procura" aria-label="Busca">
+                            <button class="btn btn-outline-secondary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        </form>
+                        <p id="search-result" class="search-result mt-2 text-primary fw-semibold"></p>
+                    </div>
+                </div>
+
+                <div class="col-cart ms-auto col-lg-2  d-flex align-items-center gap-3 ">
+                    <a href="#" class="user-field text-decoration-none text-dark d-flex align-items-center gap-1">
+                        <img src="img/user-icon.png" alt="Ícone do usuário" class="user-img">
+                        <span class="user-text">Olá, <br> Nome cliente!</span>
+                    </a>
+                    <a href="#" class="position-relative text-dark">
+                        <i class="bi bi-cart fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="category-nav py-3 bg-white border-bottom">
+            <div class="container position-relative">
+                <!-- Botão Hamburguer -->
+
+                <ul class="nav flex-wrap">
+                    <li class="nav-item position-relative">
+                        <a class="nav-link fw-semibold " href="#">
+                            <i class="fa-solid fa-bars"></i> Todas as Categorias
+                        </a>
+
+                        <!-- drop Menu -->
+                        <div class="drop-menu">
+
+                            <!-- Coluna 1: Departamentos -->
+                            <ul class="drop-col departments">
+                                <li><a href="#" class="fw-semibold">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                                <li><a href="#">Departamento <i class="fa-solid fa-angle-right fa-sm"></i></a></li>
+                            </ul>
+
+                            <!-- Coluna 2: Categorias -->
+                            <ul class="drop-col categories">
+                                <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                            </ul>
+
+                            <!-- Coluna 3: Categorias -->
+                            <ul class="drop-col categories">
+                                <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                            </ul>
+                            <!-- Coluna 4: Categorias -->
+                            <ul class="drop-col categories">
+                                <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                            </ul>
+
+                            <!-- Coluna 5: Imagem -->
+                            <div class="drop-col image">
+                                <div class="overlay-container">
+                                    <img src="img/drop-mug.png" alt="Banner Promocional" class="img-fluid">
+                                    <div class="image-overlay"></div>]
+                                    <div class="overlay-content text-white">
+                                        <span>
+                                            Confira os<br> Produtos
+                                            <br> <strong> Que </strong> <br> <strong>acabaram</strong> <br> <strong> De chegar</strong>
+                                        </span>
+                                        <button href="#" class="btn-drop-img btn btn-outline-light btn-sm mt-2">VER TODOS</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Outros departamentos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Departamento</a>
+                        <div class="drop-menu drop-departaments">
+                            <div class="d-flex flex-column w-100">
+                                <div class="drop-departaments-title">
+                                    <h5>Departamento</h5>
+                                </div>
+
+
+                                <div class="d-flex flex-row">
+                                    <ul class="drop-col categories">
+                                        <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                    </ul>
+                                    <ul class="drop-col categories">
+                                        <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                    </ul>
+                                    <ul class="drop-col categories">
+                                        <li><a href="#" class="fw-semibold">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                        <li><a href="#">Categoria</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="drop-col image">
+                                <div class="overlay-container">
+                                    <img src="img/drop-mug.png" alt="Banner Promocional" class="img-fluid">
+                                    <div class="image-overlay"></div>
+                                    <div class="overlay-content text-white">
+                                        <span>
+                                            Confira os<br> Produtos
+                                            <br> <strong> Que </strong> <br> <strong>acabaram</strong> <br> <strong> De chegar</strong>
+                                        </span>
+                                        <button href="#" class="btn-drop-img btn btn-outline-light btn-sm mt-2">VER TODOS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Departamento</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="main-banner">
+            <div class="banner-img-wrapper">
+                <img src="img/banner-cadeira.jpg" alt="Cadeira com roupas empilhadas" class="banner-chair">
+                <div class="banner-text">
+                    <h1><strong>super <wbr></strong>sale</h1>
+                    <p>Itens selecionados com até</p>
+                    <span>50%off</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Swiper Carousel -->
+        <section class="product-section product-carousel">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center">
+                    <h2>Lançamentos</h2>
+                    <a href="#" class="see-more">Ver mais</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Botões  -->
+                        <button class="btn-carousel carousel-control-prev"></button>
+                        <button class="btn-carousel carousel-control-next"></button>
+                        <!--  paginação -->
+                        <div class="row justify-content-center">
+                            <div class="swiper-pagination "></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- Caneca -->
+        <section class="mokup-section">
+            <div class="container">
+                <div class="row align-items-center mokup-row">
+                    <!-- Lado da imagem -->
+                    <div class="col-lg-6 col-mokup">
+                        <div class="mug-container">
+                            <img src="img/mug-mockup.png" alt="Caneca Avanti" class="mug-img">
+                        </div>
+                    </div>
+
+                    <!-- Lado do texto -->
+                    <div class="col-lg-6 col-mokup">
+                        <div class="text-container">
+                            <h2>Lorem Ipsum</h2>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+                                fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+                                fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Caneca fundo cinza -->
+        <section class="mokup-section-grey">
+            <div class="container">
+                <div class="row align-items-center mokup-row__2">
+
+
+                    <!-- Lado do texto -->
+                    <div class="col-lg-6 col-md-8 col-mokup">
+                        <div class="text-content">
+                            <h2>Lorem Ipsum</h2>
+
+                            <div class="info-line">
+                                <img src="img/location-icon.svg" alt="Ícone" class="info-icon">
+                                <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+
+                            <div class="info-line">
+                                <img src="img/location-icon.svg" alt="Ícone" class="info-icon">
+                                <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+
+                            <div class="info-line">
+                                <img src="img/location-icon.svg" alt="Ícone" class="info-icon">
+                                <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lado da imagem -->
+                    <div class="col-md-6 col-mokup d-flex justify-content-center">
+                        <img src="img/mug-mockup_2.png" alt="Caneca Avanti" class="mug-img__2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Caneca -->
+        <section class="mokup-section">
+            <div class="container">
+                <div class="row align-items-center mokup-row">
+                    <!-- Lado da imagem -->
+                    <div class="col-md-6 col-mokup">
+                        <div class="mug-container">
+                            <img src="img/mug-mockup.png" alt="Caneca Avanti" class="mug-img">
+                        </div>
+                    </div>
+
+                    <!-- Lado do texto -->
+                    <div class="col-md-6 col-mokup">
+                        <div class="text-container">
+                            <h2>Lorem Ipsum</h2>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+                                fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+                                fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Swiper Carousel -->
+        <section class="product-section product-carousel">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center">
+                    <h2>Lançamentos</h2>
+                    <a href="#" class="see-more">Ver mais</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide d-flex">
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                                <div class="product-card">
+                                    <span class="badge-new">NOVO</span>
+                                    <img src="img/man-t-shirt.png" alt="Produto">
+                                    <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                    <div class="price-group">
+                                        <span class="old-price">R$100,00</span>
+                                        <span class="discount">10% OFF</span>
+                                    </div>
+                                    <p class="current-price">R$79,90</p>
+                                    <p class="installments">Ou em até <strong>10x de R$ 7,90</strong></p>
+                                    <button class="buy-button">Comprar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--  paginação -->
+                        <div class="row justify-content-center">
+                            <div class="swiper-pagination "></div>
+                        </div>
+                        <!-- Botões  -->
+                        <button class="btn-carousel carousel-control-prev"></button>
+                        <button class="btn-carousel carousel-control-next"></button>
+                    </div>
+
+
+
+                </div>
+
+        </section>
+
+        <section class="second-banner">
+            <h3>
+                Entre em contato conosco e verifique a disponibilidade para sua região!
+            </h3>
+        </section>
+
+
+        <section class="newsletter-section py-5">
+            <div class="container text-center">
+                <h5 class="mb-4">
+                    Cadastre-se na nossa <span class="text-primary fw-semibold">newsletter</span>
+                </h5>
+
+                <form class="p-4 rounded d-flex flex-wrap justify-content-center align-items-center gap-3">
+                    <input type="text" class="form-control form-control-sm w-auto" placeholder="Digite seu nome" required>
+
+                    <input type="email" class="form-control form-control-sm w-auto" placeholder="Digite seu e-mail" required>
+
+                    <div class="form-check d-flex align-items-center mb-0">
+                        <input class="form-check-input me-2" type="checkbox" id="privacidade" required>
+                        <label class="form-check-label small" for="privacidade">
+                    Estou de acordo com a <a href="#" class="text-decoration-underline">Política de Privacidade</a>
+                  </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-sm ">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container footer-top-py ">
+
+                <div class="row text-center text-md-start justify-content-center mb-4">
+                    <!-- Coluna 1: Logo + redes sociais -->
+                    <div class="col-lg-3 col-md-12 mb-3 footer-section">
+                        <img src="img/avanti.png" alt="AVANTI" class="mb-3 ">
+                        <div class="social-icons d-flex gap-3 align-items-center">
+                            <a href="#"><img src="img/icon-instagram.png" alt="Instagram" class="icon"></a>
+                            <a href="#"><img src="img/icon-facebook.png" alt="Facebook" class="icon"></a>
+                            <a href="#"><img src="img/icon-youtube.png" alt="YouTube" class="icon"></a>
+                            <a href="#"><img src="img/icon-tiktok.png" alt="TikTok" class="icon"></a>
+                        </div>
+
+                    </div>
+                    <div class="footer-divider-dropdown d-none"></div>
+                    <!-- Coluna 2: Institucional -->
+
+                    <div class="col-lg-3 col-md-12 mb-3 footer-dropdown">
+                        <h4 class="dropdown-toggle-footer d-flex justify-content-between align-items-center">
+                            Institucional <i class="bi bi-chevron-down arrow"></i>
+                        </h4>
+                        <div class="dropdown-content-footer">
+                            <h5 class="mb-1">Sobre Nós</h5>
+                            <h5 class="mb-1">Nossas Lojas</h5>
+                            <h5 class="mb-1">Privacidade e Segurança</h5>
+                            <h5 class="mb-0">Termos e Condições</h5>
+                        </div>
+                    </div>
+                    <div class="footer-divider-dropdown d-none"></div>
+
+                    <!-- Coluna 3: Central de ajuda -->
+                    <div class="col-lg-3 col-md-12 mb-3 footer-dropdown">
+                        <h4 class="dropdown-toggle-footer d-flex justify-content-between align-items-center">
+                            Central de ajuda <i class="bi bi-chevron-down arrow"></i>
+                        </h4>
+                        <div class="dropdown-content-footer">
+                            <h5 class="mb-1">Fale Conosco</h5>
+                            <h5 class="mb-1">Frete e Entrega</h5>
+                            <h5 class="mb-1">Trocas e Devoluções</h5>
+                            <h5 class="mb-1">Formas de Pagamento</h5>
+                            <h5 class="mb-0">FAQ</h5>
+                        </div>
+                    </div>
+                    <div class="footer-divider-dropdown d-none"></div>
+
+                    <!-- Coluna 4: Atendimento -->
+                    <div class="col-lg-3 col-md-12 mb-3 footer-dropdown">
+                        <h4 class="dropdown-toggle-footer d-flex justify-content-between align-items-center">
+                            Atendimento <i class="bi bi-chevron-down arrow"></i>
+                        </h4>
+                        <div class="dropdown-content-footer">
+                            <h5 class="mb-1"><strong>Telefone:</strong> (00) 1234-5678</h5>
+                            <h5 class="mb-1"><strong>E-mail:</strong> exemplo@exemplo.com.br</h5>
+                            <h5 class="mb-0"><strong>Horário de atendimento:</strong><br>Seg a Sáb 07h às 23h<br>Dom e Feriados 07h às 21h</h5>
+                        </div>
+                    </div>
+                    <div class="footer-divider-dropdown d-none"></div>
+
+
+                    <div class="payments-icons ">
+                        <a href="#"><img src="img/icon-amex.png" alt="Amex" class="icon"></a>
+                        <a href="#"><img src="img/icon-mastercard.png" alt="Mastercard" class="icon"></a>
+                        <a href="#"><img src="img/icon-visa.png" alt="Visa" class="icon"></a>
+                        <a href="#"><img src="img/icon-hipercard.png" alt="Hipercard" class="icon"></a>
+                        <a href="#"><img src="img/icon-elo.png" alt="Elo" class="icon"></a>
+                        <a href="#"><img src="img/icon-diners.png" alt="Diners" class="icon"></a>
+                        <a href="#"><img src="img/icon-paypal.png" alt="Paypal" class="icon"></a>
+                        <a href="#"><img src="img/icon-pix.png" alt="Pix" class="icon"></a>
+                        <a href="#"><img src="img/icon-boleto.png" alt="Boleto" class="icon"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Linha divisória -->
+        <div class="footer-divider "></div>
+
+        <!-- Rodapé inferior -->
+
+        <div class="footer-bottom ">
+            <div class="container footer-bottom-py text-center small text-muted ">
+                <p class="mb-2 ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                <div class="payments-icons pay-icons-2 ">
+                    <a href="#"><img src="img/icon-lets.png" alt="Let's encrypt" class="icon"></a>
+                    <a href="#"><img src="img/icon-vtex-pci.png" alt="Vetex/PCI" class="icon"></a>
+                    <a href="#"><img src="img/icon-avanti.png" alt="Avanti" class="icon"></a>
+                    <a href="#"><img src="img/icon-vtex.png" alt="Vtex" class="icon"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="js/script.js "></script>
+</body>
+
+</html>
