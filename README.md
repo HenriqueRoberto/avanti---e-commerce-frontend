@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Avanti - Loja Virtual (Projeto Front-End)
 
 Este é um projeto front-end de uma loja virtual fictícia, desenvolvido com foco em **layout responsivo**
@@ -60,3 +61,6 @@ A responsividade foi feita com media queries e classes utilitárias do Bootstrap
 Basta abrir o `index.html` em seu navegador.
 
 
+=======
+# avanti---e-commerce-frontend
+>>>>>>> f038f533aadb5fa35e14e3ad72d7ec96d2031cfc
